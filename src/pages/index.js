@@ -1,11 +1,11 @@
-import { PageHeader } from '../components/PageHeader'
+import { HomeHeader } from '../components/PageHeader'
 import { Notification } from '../components/Notification'
 import { AvatarProfile } from '../components/AvatarProfile'
 import styles from '../styles/pages/Home.module.css'
 
 export default function Home() {
   return (
-    <PageHeader>
+    <HomeHeader>
       <section className={["top", styles.animateUp].join(" ")}>
         <h2 className="srOnly">Homepage</h2>
         <img className="logo" src="images/logo.svg" alt="Logo" />
@@ -44,6 +44,6 @@ export default function Home() {
                     </a>
                 </section>
                 */}
-    </PageHeader>
+    </HomeHeader>
   )
 }
