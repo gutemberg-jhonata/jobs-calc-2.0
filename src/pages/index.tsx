@@ -1,9 +1,12 @@
-import { HomeHeader } from '../components/Header'
-import { Notification } from '../components/Notification'
-import { AvatarProfile } from '../components/AvatarProfile'
-import styles from '../styles/pages/Home.module.css'
+import { HomeHeader } from "../components/Header";
+import { Notification } from "../components/Notification";
+import { AvatarProfile } from "../components/AvatarProfile";
+import { StatusCount } from "../components/StatusCount";
+import { NewJobButton } from "../components/NewJobButton";
+import styles from "../styles/pages/Home.module.css";
 
 export default function Home() {
+
   return (
     <HomeHeader>
       <section className="top animate-up">
@@ -15,35 +18,11 @@ export default function Home() {
 
       <div className="separator" />
 
-      {/*
-                    <section className={styles.summary} className={[styles.animateUp, styles.delay1]}>
-                    <h2 className={styles.srOnly}>Sumário</h2>
-
-                    <div className={styles.info}>
-                        <div className={styles.total}>
-                            <strong>{ <%= statusCount.total %> }</strong>
-                            Projetos ao total
-                        </div>
-                    </div>
-
-
-                    <div className={styles.inProgress}>
-                        <strong>{ <%= statusCount.progress %> }</strong>
-                        Em andamento
-                    </div>
-                    <div className={styles.finished}>
-                        <strong>{ <%= statusCount.done %> }</strong>
-                        Encerrados
-                    </div>
-                    
-                    <a className={[styles.button, styles.orange]} href="/job">
-                        <span>
-                            <img src="images/plus-24.svg" alt="Novo Job" />
-                        </span>
-                        Adicionar novo job
-                    </a>
-                </section>
-                */}
+      <section className={[styles.summary, "animate-up", "delay-1"].join(" ")}>
+        <h2 className="sr-only">Sumário</h2>
+        <StatusCount />      
+        <NewJobButton />
+      </section>
     </HomeHeader>
-  )
+  );
 }

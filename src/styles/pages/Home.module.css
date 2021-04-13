@@ -1,10 +1,16 @@
+.summary {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 /* 
  * main
 /* -------------------------------------------------- */
 /*main {
   margin-top: -2.825rem;
 }*/
-
 
 /* 
  * CARD
@@ -14,7 +20,7 @@
   grid-template-columns: 5% 35% 20% 15% 15% 10%;
   align-items: center;
 
-  margin-bottom:  0.5rem;
+  margin-bottom: 0.5rem;
 
   position: relative;
 
@@ -22,29 +28,32 @@
 }
 
 .card:hover {
-  background: 
-  linear-gradient(90deg, rgba(250, 156, 45, 0.1) 0.45%, rgba(252, 253, 255, 0.1) 31.4%),
+  background: linear-gradient(
+      90deg,
+      rgba(250, 156, 45, 0.1) 0.45%,
+      rgba(252, 253, 255, 0.1) 31.4%
+    ),
     white;
 }
 
 .card::before {
-  content: ' ';
-  
-  width: .25rem;
+  content: " ";
+
+  width: 0.25rem;
   height: 0%;
   background-color: var(--color-secondary);
 
-  border-radius: .313rem 0 0 .313rem;
+  border-radius: 0.313rem 0 0 0.313rem;
 
   position: absolute;
   top: 0;
   left: -1px;
 
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 .card:hover::before {
-  height:100%;
+  height: 100%;
 }
 
 .card .column:last-child {
@@ -52,7 +61,7 @@
 }
 
 .card .column > span {
-  display:block;
+  display: block;
 
   font-family: Inter;
   font-weight: 600;
@@ -84,31 +93,30 @@
   height: 1.5rem;
 }
 
-@media(max-width:1390px) {
+@media (max-width: 1390px) {
   .card {
     grid-template-columns: 5% 30% 20% 15% 17.25% 12.25%;
   }
 }
 
-@media(max-width:970px) {
+@media (max-width: 970px) {
   .card {
     grid-template-columns: 31% 23% 13% 20.25% 12.25%;
   }
-  
+
   .column.id {
     display: none;
   }
 }
 
-@media(max-width:770px) {
+@media (max-width: 770px) {
   .card {
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-    "lt rt"
-    "lm rm"
-    "lb rb"
-    ;
-    gap: .5rem;
+    grid-template-areas:
+      "lt rt"
+      "lm rm"
+      "lb rb";
+    gap: 0.5rem;
   }
 
   .column.id {
@@ -128,7 +136,7 @@
     justify-self: end;
     grid-area: rt;
   }
-  .column.actions{
+  .column.actions {
     grid-area: rb;
   }
 }
