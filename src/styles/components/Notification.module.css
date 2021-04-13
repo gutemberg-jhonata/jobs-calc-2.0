@@ -1,0 +1,11 @@
+.notification {
+    display: flex;
+    align-items: center;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.notification img {
+    margin-right: 0.5rem;
+}
