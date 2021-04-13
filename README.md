@@ -29,7 +29,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - CSS
 - JavaScript
 - NodeJS
-- EJS
+- NextJS
 - Express
 - SQLite
 
