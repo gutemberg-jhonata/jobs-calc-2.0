@@ -6,8 +6,8 @@ import styles from '../styles/pages/Home.module.css'
 export default function Home() {
   return (
     <HomeHeader>
-      <section className={["top", styles.animateUp].join(" ")}>
-        <h2 className="srOnly">Homepage</h2>
+      <section className="top animate-up">
+        <h2 className="sr-only">Homepage</h2>
         <img className="logo" src="images/logo.svg" alt="Logo" />
         <Notification />
         <AvatarProfile />
