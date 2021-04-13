@@ -1,4 +1,4 @@
-import { PageHeader } from "../components/PageHeader";
+import { PageHeader } from "../components/Header";
 
 export default function Profile() {
   return (

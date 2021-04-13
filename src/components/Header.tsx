@@ -1,4 +1,4 @@
-import styles from '../styles/components/PageHeader.module.css'
+import styles from '../styles/components/Header.module.css'
 
 export function HomeHeader({ children }) {
     return (
@@ -13,7 +13,7 @@ export function HomeHeader({ children }) {
 export function PageHeader({ children }) {
     return (
         <header className={[styles.pageHeader, styles.inner].join(" ")}>
-            <div className="container animate-up">
+            <div className="container animate-up flex">
                 <a href="/" className="back">
                     <img src="/images/back.svg" alt="" />
                 </a>

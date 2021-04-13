@@ -1,4 +1,4 @@
-import { HomeHeader } from '../components/PageHeader'
+import { HomeHeader } from '../components/Header'
 import { Notification } from '../components/Notification'
 import { AvatarProfile } from '../components/AvatarProfile'
 import styles from '../styles/pages/Home.module.css'
