@@ -13,8 +13,8 @@ export function HomeHeader({ children }) {
 export function PageHeader({ children }) {
     return (
         <header className={[styles.pageHeader, styles.inner].join(" ")}>
-            <div class="container animate-up">
-                <a href="/" class="back">
+            <div className="container animate-up">
+                <a href="/" className="back">
                     <img src="/images/back.svg" alt="" />
                 </a>
                 <h1>{children}</h1>
