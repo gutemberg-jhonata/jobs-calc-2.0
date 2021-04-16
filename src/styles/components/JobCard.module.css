@@ -1,15 +1,15 @@
 .card {
   background: var(--color-text);
-  
+
   border-radius: 0.313rem;
-  border: 1px solid #E1E3E6;
-  
-  color: #5A5A66;
-  
+  border: 1px solid #e1e3e6;
+
+  color: #5a5a66;
+
   padding: 1.5rem;
-  
+
   text-align: left;
-  
+
   display: grid;
   grid-template-columns: 5% 35% 20% 15% 15% 10%;
   align-items: center;
@@ -149,7 +149,6 @@
   line-height: 1.625rem;
 
   background-color: rgb(237, 237, 237);
-  
 }
 
 .progress {
@@ -160,4 +159,61 @@
 .done {
   background: var(--color-badge-done-background);
   color: var(--color-badge-done-text);
+}
+
+.button {
+  padding: 0.75rem 3rem;
+  border-radius: 0.313rem;
+  border: 0;
+
+  font-family: IBM Plex Sans;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.625rem;
+  text-transform: uppercase;
+
+  transition: all .2s;
+
+  cursor:pointer;
+
+  display: inline-flex;
+  justify-content:center;
+  align-items: center;
+}
+
+button.button {
+  line-height: 1.5rem;
+}
+
+.button.red {
+  background: var(--color-delete);
+  color: var(--color-text);
+}
+
+.button.red:hover {
+  background: #FA3F38;
+}
+
+.button.white {
+  background: #fcfdff;
+  border: 1px solid #e1e3e6;
+}
+
+.button.white:hover {
+  background: #f0f2f5;
+}
+
+.button + .button {
+  margin-left: 1rem;
+}
+
+.actions .button {
+  width: 2.5rem;
+  height: 2.5rem;
+
+  padding: 0;
+}
+
+.actions .button + button {
+  margin-left: 0.5rem;
 }

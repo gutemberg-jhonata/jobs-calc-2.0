@@ -18,11 +18,7 @@ export function JobCard({ job }) {
         <p>R$ {job.budget.toFixed(2).replace(".", ",")} </p>
       </div>
       <div
-        className={[
-          styles[job.status],
-          styles.badge,
-          styles.column,
-        ].join(" ")}
+        className={[styles[job.status], styles.badge, styles.column].join(" ")}
       >
         {job.status === "done" ? "Encerrado" : "Em andamento"}
       </div>
@@ -30,12 +26,15 @@ export function JobCard({ job }) {
         <p className="sr-only">Ações</p>
         <a
           href={`/job/${job.id}`}
-          className="button white edit"
+          className={[styles.button, styles.white, styles.edit].join(" ")}
           title="Editar Job"
         >
           <img src="/images/edit-24.svg" alt="Editar Job" />
         </a>
-        <button className="delete button white" title="Excluir Job">
+        <button
+          className={[styles.delete, styles.button, styles.white].join(" ")}
+          title="Excluir Job"
+        >
           <img src="/images/trash-24.svg" alt="Excluir Job" />
         </button>
       </div>
