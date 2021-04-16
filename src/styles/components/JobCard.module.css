@@ -134,3 +134,30 @@
     grid-area: rb;
   }
 }
+
+.badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+
+  border-radius: 2.5rem;
+  padding: 0.5rem 1.5rem;
+
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.625rem;
+
+  background-color: rgb(237, 237, 237);
+  
+}
+
+.progress {
+  background-color: var(--color-badge-progress-background);
+  color: var(--color-badge-progress-text);
+}
+
+.done {
+  background: var(--color-badge-done-background);
+  color: var(--color-badge-done-text);
+}

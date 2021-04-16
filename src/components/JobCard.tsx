@@ -1,4 +1,4 @@
-import styles from '../styles/components/JobCard.module.css';
+import styles from "../styles/components/JobCard.module.css";
 
 export function JobCard({ job }) {
   return (
@@ -17,7 +17,13 @@ export function JobCard({ job }) {
         <span>Valor</span>
         <p>R$ {job.budget.toFixed(2).replace(".", ",")} </p>
       </div>
-      <div className={[styles.status, styles.badge, styles.column].join(" ")}>
+      <div
+        className={[
+          styles[job.status],
+          styles.badge,
+          styles.column,
+        ].join(" ")}
+      >
         {job.status === "done" ? "Encerrado" : "Em andamento"}
       </div>
       <div className={[styles.actions, styles.column, styles.flex].join(" ")}>

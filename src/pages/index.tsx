@@ -49,7 +49,7 @@ export default function Home() {
           <div className="cards">
             {jobs.map((job) => {
               return (
-                <JobCard job={job} />
+                <JobCard key={job.id} job={job} />
               );
             })}
           </div>
