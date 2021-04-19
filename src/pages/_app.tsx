@@ -1,7 +1,8 @@
 import Head from "next/head";
 
 import "../styles/globals.css";
-import "../styles/animations.css";
+import "../styles/partials/animations.css";
+import "../styles/partials/forms.css";
 
 function MyApp({ Component, pageProps }) {
   return (
