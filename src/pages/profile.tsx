@@ -1,21 +1,29 @@
+import React, { useState } from "react";
 import { PageHeader } from "../components/Header";
 import styles from "../styles/pages/Profile.module.css";
 
-const profile = {
-  name: "Jhonata Gutemberg",
-  valueHour: 75,
-  avatar: "https://github.com/gutemberg-jhonata.png",
-  hoursPerDay: 8,
-  daysPerWeek: 7,
-  vacationPerYear: 4,
-  monthlyBudget: 3000,
-};
-
-const handleSubmit = () => {
-  console.log(profile);
-}
-
 export default function Profile() {
+  const [profile, setProfile] = useState({
+    name: "Jhonata Gutemberg",
+    valueHour: 75,
+    avatar: "https://github.com/gutemberg-jhonata.png",
+    hoursPerDay: 8,
+    daysPerWeek: 7,
+    vacationPerYear: 4,
+    monthlyBudget: 3000,
+  });
+  
+  const handleSubmit = () => {
+    console.log(profile);
+  }
+  
+  function handleChange({target}: React.ChangeEvent<HTMLInputElement>) {
+    const name = target.name; 
+    const value = target.value;
+
+    setProfile({...profile, [name]: value});
+  }
+
   return (
     <>
       <PageHeader>Meu Perfil</PageHeader>
@@ -57,6 +65,7 @@ export default function Profile() {
                     id="name"
                     name="name"
                     value={profile.name}
+                    onChange={handleChange}
                   />
                 </div>
 
@@ -66,6 +75,8 @@ export default function Profile() {
                     placeholder="https://"
                     type="url"
                     value={profile.avatar}
+                    name="avatar"
+                    onChange={handleChange}
                   />
                 </div>
               </div>
@@ -85,7 +96,9 @@ export default function Profile() {
                     type="amount"
                     step="0.1"
                     placeholder="R$"
+                    name="monthlyBudget"
                     value={profile.monthlyBudget}
+                    onChange={handleChange}
                   />
                 </div>
 
@@ -94,7 +107,12 @@ export default function Profile() {
                     Quantas horas <br />
                     quero trabalhar por dia?
                   </label>
-                  <input type="number" value={profile.hoursPerDay} />
+                  <input 
+                    type="number" 
+                    name="hoursPerDay"
+                    value={profile.hoursPerDay} 
+                    onChange={handleChange}
+                  />
                 </div>
               </div>
 
@@ -104,7 +122,12 @@ export default function Profile() {
                     Quantos dias <br />
                     quero trabalhar por semana?
                   </label>
-                  <input type="number" value={profile.daysPerWeek} />
+                  <input 
+                    type="number" 
+                    name="daysPerWeek"
+                    value={profile.daysPerWeek} 
+                    onChange={handleChange}  
+                  />
                 </div>
 
                 <div className="input-wrapper">
@@ -112,7 +135,12 @@ export default function Profile() {
                     Quantas semanas <br />
                     por ano você quer tirar férias?
                   </label>
-                  <input type="number" value={profile.vacationPerYear} />
+                  <input 
+                    type="number" 
+                    name="vacationPerYear"
+                    value={profile.vacationPerYear} 
+                    onChange={handleChange}
+                  />
                 </div>
               </div>
             </fieldset>
