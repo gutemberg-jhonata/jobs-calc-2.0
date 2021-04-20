@@ -45,6 +45,10 @@ Você pode visualizar o layout do projeto através [desse link](https://www.figm
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](.github/LICENSE.md) para mais detalhes.
 
----
+## ☑️ Uso
 
-Feito com ♥ by Rocketseat :wave: [Participe da nossa comunidade!](https://discordapp.com/invite/gCRAFhc)
+```bash 
+git clone https://github.com/gutemberg-jhonata/jobs-calc-nextjs.git
+cd jobs-calc-nextjs
+yarn dev
+```
